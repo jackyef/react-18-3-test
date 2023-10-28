@@ -1,10 +1,10 @@
 // @ts-expect-error `cache` isn't in @types/react yet
-import { Suspense, cache, memo } from "react";
+import { ReactNode, Suspense, cache, memo } from "react";
 import { ErrorBoundary, ErrorProps } from "../ErrorBoundary";
 
 type Props = { name: string }
 
-const Container = ({ children }) => {
+const Container = ({ children }: { children: ReactNode }) => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>{children}</div>
   )
